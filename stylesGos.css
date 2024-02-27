@@ -1,0 +1,229 @@
+
+        .gallery {
+            
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            
+            
+        }
+
+        
+
+        .gallery img {
+            width: 700px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+            margin-top: 50px;
+        }
+        .block {
+        display: inline-block;
+        margin: 30px;
+        }
+
+         .block1 {
+        display: inline-block;
+        margin: 50px;
+        }
+
+
+       .gallery-container1 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery1 {
+            display: flex;
+            overflow-x: auto;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+        }
+
+        .gallery1 img {
+            scroll-snap-align: start;
+            width: 100%;
+            height: auto;
+        }
+         .gallery3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+             transition: transform 2s;
+            
+        }
+
+        
+
+        .gallery3 img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .arrow1 {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .gallery-container4 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery4 {
+            display: flex;
+            overflow-x: auto;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+        }
+
+        .gallery4 img {
+            scroll-snap-align: start;
+            width: 100%;
+            height: auto;
+        }
+
+        .arrow4 {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+         body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  
+
+
+  main {
+    height: 2000px; /* just for demonstration */
+  }
+
+    #image {
+        
+        height: auto;
+        border: 2px solid black;
+        transition: transform 2s;
+    }
+
+    #image:hover {
+        transform: scale(1.2);
+    }
+    .image-container {
+    width: 1600px; /* Ширина рамки */
+    height: 700px; /* Высота рамки */
+    overflow: hidden; /* Обрезаем изображение, которое не помещается */
+}
+
+.image-container img {
+    width: 100%; /* Изначальная ширина изображения */
+    height: auto; /* Автоматическая высота */
+    animation: zoomInOut 30s infinite alternate; /* Анимация: увеличение и уменьшение через 5 секунд */
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1); /* Изначальный масштаб */
+    }
+    50% {
+        transform: scale(1.2); /* Увеличенный масштаб */
+    }
+}
+
+  header {
+    background-color: white;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    /* initially hidden */
+    
+  }
+
+
+ 
+   .btn-link {
+        display: inline-block;
+        padding: 5px 10px;
+       font-family: Jessica Bold;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .btn-link:hover {
+        background-color: #0056b3;
+    }
+    .btn-link1 {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: green;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: right;
+    }
+    .btn-link1:hover {
+        background-color: #0056b3;
+    }
+     .btn-link2 {
+        display: inline-block;
+        padding: 15px 10px;
+        background-color: green;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+
+    }
+    .btn-link2:hover {
+        background-color: #0056b3;
+    }
+    .downCons{
+        padding: 5px 10px;
+        text-decoration: none;
+        top: 800px;
+        left: 1300px;
+        text-align: right;
+        background-color: green;
+        border-radius: 5px;
+        color: white;
+        position: fixed;
+        
+    animation: slideIn 2s forwards; /* анимация выезда */
+    }
+     @keyframes slideIn {
+    to {
+       top: 500px; /* конечное положение внизу экрана */
+    }
+.object {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        transition: transform 2s;
+    }
+
+    .object.zoomed {
+        transform: scale(1.5);
+    }
